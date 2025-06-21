@@ -1,0 +1,36 @@
+.button {
+  padding: 12px 32px;
+  font-family: 'Rubik', sans-serif;
+  border-radius: 64px;
+  cursor: pointer;
+  color: #fff;
+  transition: .3s opacity;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media(max-width: 1024px) {
+    padding: 8px 26px;
+    border-radius: 32px;
+    font-size: 12px;
+  }
+
+  &_primary {
+    background: oklch(54.6% 0.245 262.881);
+    border-color: oklch(54.6% 0.245 262.881);
+  }
+
+  &_transparent {
+    background: transparent;
+    border-color: oklch(54.6% 0.245 262.881)
+  }
+
+  &_wrap {
+    white-space: wrap;
+  }
+
+  &_no-wrap {
+    white-space: nowrap;
+  }
+}

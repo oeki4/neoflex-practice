@@ -1,10 +1,15 @@
-import type { ReactNode } from "react";
+import { Suspense, useCallback } from "react";
+import { Route, type RouteProps, Routes } from "react-router";
+import { routeConfig } from "@/shared/config/routes/routes.tsx";
 
-interface RoutesProviderProps {
-  children: ReactNode;
-}
+export const RoutesProvider = () => {
+  const renderWithWrapper = useCallback((route: RouteProps) => {
+    const element = (
+      <Suspense fallback={<>Loading...</>}>{route.element}</Suspense>
+    );
 
-export const RoutesProvider = (props: RoutesProviderProps) => {
-  const { children } = props;
-  return children;
+    return <Route key={route.path} path={route.path} element={element} />;
+  }, []);
+
+  return <Routes>{Object.values(routeConfig).map(renderWithWrapper)}</Routes>;
 };

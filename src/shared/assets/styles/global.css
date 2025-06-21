@@ -2,4 +2,6 @@
 
 @theme {
     --font-rubik: "Rubik", sans-serif;
+
+    --breakpoint-xs: 375px;
 }

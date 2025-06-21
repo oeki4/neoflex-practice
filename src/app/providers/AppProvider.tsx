@@ -1,10 +1,10 @@
-import type { ReactNode } from "react";
+import { RoutesProvider } from "@/app/providers/RoutesProvider/RoutesProvider.tsx";
+import { BrowserRouter } from "react-router";
 
-interface AppProviderProps {
-  children: ReactNode;
-}
-
-export const AppProvider = (props: AppProviderProps) => {
-  const { children } = props;
-  return children;
+export const AppProvider = () => {
+  return (
+    <BrowserRouter>
+      <RoutesProvider />
+    </BrowserRouter>
+  );
 };

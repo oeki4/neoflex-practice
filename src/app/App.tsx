@@ -1,10 +1,12 @@
+import { Navbar } from "@/shared/ui/Navbar/Navbar.tsx";
 import { AppProvider } from "./providers/AppProvider.tsx";
 
 function App() {
   return (
-    <AppProvider>
-      <h1 className="text-3xl font-rubik font-bold underline">Hello world!</h1>
-    </AppProvider>
+    <div>
+      <Navbar />
+      <AppProvider />
+    </div>
   );
 }
 
