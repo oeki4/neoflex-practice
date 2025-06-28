@@ -1,12 +1,13 @@
 import { Navbar } from "@/shared/ui/Navbar/Navbar.tsx";
 import { AppProvider } from "./providers/AppProvider.tsx";
+import { BrowserRouter } from "react-router";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
       <AppProvider />
-    </div>
+    </BrowserRouter>
   );
 }
 

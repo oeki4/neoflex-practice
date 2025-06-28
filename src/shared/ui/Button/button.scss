@@ -5,6 +5,7 @@
   cursor: pointer;
   color: #fff;
   transition: .3s opacity;
+  border: 1px solid #ffffff;
 
   &:hover {
     opacity: 0.7;
@@ -23,7 +24,8 @@
 
   &_transparent {
     background: transparent;
-    border-color: oklch(54.6% 0.245 262.881)
+    border-color: oklch(54.6% 0.245 262.881);
+    color: oklch(54.6% 0.245 262.881);
   }
 
   &_wrap {

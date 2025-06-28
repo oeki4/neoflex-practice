@@ -13,9 +13,9 @@ export const CallIcon = (props: SVGProps<SVGSVGElement>) => {
         opacity=".5"
       />
       <path
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M22 7a5 5 0 0 1-7.226 4.478.817.817 0 0 0-.574-.067l-1.113.298a.65.65 0 0 1-.796-.796l.298-1.113a.817.817 0 0 0-.067-.574A5 5 0 1 1 22 7Zm-5-2.188c.518 0 .938.42.938.938v.313h.312a.937.937 0 1 1 0 1.875h-.313v.312a.937.937 0 1 1-1.875 0v-.313h-.312a.937.937 0 1 1 0-1.875h.313V5.75c0-.518.42-.938.937-.938Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
     </svg>
   );

@@ -3,6 +3,7 @@ import { UserIcon } from "@/shared/ui/Icons/UserIcon.tsx";
 import { CallIcon } from "@/shared/ui/Icons/CallIcon.tsx";
 import { ExitIcon } from "@/shared/ui/Icons/ExitIcon.tsx";
 import { Button } from "@/shared/ui/Button/Button.tsx";
+import { NavLink } from "react-router";
 
 export const Navbar = () => {
   return (
@@ -32,28 +33,28 @@ export const Navbar = () => {
         <nav className="w-full">
           <ul className="flex items-center justify-around xs:justify-start text-sm md:text-base gap-2 md:gap-6">
             <li>
-              <a
+              <NavLink
                 className="font-rubik text-gray-800 transition-colors hover:text-blue-400"
-                href="#"
+                to="/"
               >
                 Домой
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
+              <NavLink
                 className="font-rubik text-gray-800 transition-colors hover:text-blue-400"
-                href="#"
+                to="/loans"
               >
                 Кредиты
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
+              <NavLink
                 className="font-rubik text-gray-800 transition-colors hover:text-blue-400"
-                href="#"
+                to="#"
               >
                 Сервисы
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
