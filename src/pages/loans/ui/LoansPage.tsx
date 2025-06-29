@@ -1,6 +1,7 @@
 import { Container } from "@/shared/ui/Container/Container.tsx";
 import { Input } from "@/shared/ui/Input/Input.tsx";
 import { Button } from "@/shared/ui/Button/Button.tsx";
+import { Checkbox } from "@/shared/ui/Checkbox/Checkbox.tsx";
 
 export const LoansPage = () => {
   return (
@@ -15,6 +16,8 @@ export const LoansPage = () => {
           placeholder="Введите наименование организации"
           label="Место работы"
         />
+        <Checkbox label="Согласен на обработку персональных данных" required />
+        <Checkbox label="Согласен на рассылку" />
         <Button className="mt-4">Оформить</Button>
       </form>
     </Container>
