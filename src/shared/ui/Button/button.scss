@@ -35,4 +35,8 @@
   &_no-wrap {
     white-space: nowrap;
   }
+
+  &:disabled {
+    opacity: .7;
+  }
 }

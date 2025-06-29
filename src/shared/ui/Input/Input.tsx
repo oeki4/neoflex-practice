@@ -24,7 +24,7 @@ export const Input = (props: InputProps) => {
         type="text"
         {...otherProps}
       />
-      {error && <p>{error}</p>}
+      {error && <p className="text-red-600 font-rubik font-medium">{error}</p>}
     </div>
   );
 };
