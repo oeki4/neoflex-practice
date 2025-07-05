@@ -3,9 +3,11 @@ import { UserIcon } from "@/shared/ui/Icons/UserIcon.tsx";
 import { CallIcon } from "@/shared/ui/Icons/CallIcon.tsx";
 import { ExitIcon } from "@/shared/ui/Icons/ExitIcon.tsx";
 import { Button } from "@/shared/ui/Button/Button.tsx";
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 
 export const Navbar = () => {
+  const location = useLocation();
+  console.log(location.pathname.includes("/loans"));
   return (
     <header>
       <Container className="flex justify-between py-6 border-b-2 border-gray-300">
@@ -34,15 +36,21 @@ export const Navbar = () => {
           <ul className="flex items-center justify-around xs:justify-start text-sm md:text-base gap-2 md:gap-6">
             <li>
               <NavLink
-                className="font-rubik text-gray-800 transition-colors hover:text-blue-400"
-                to="/"
+                className={[
+                  "font-rubik text-gray-800 transition-colors hover:text-blue-400",
+                  location.pathname.includes("/home") ? "!text-blue-400" : "",
+                ].join(" ")}
+                to="/home"
               >
                 Домой
               </NavLink>
             </li>
             <li>
               <NavLink
-                className="font-rubik text-gray-800 transition-colors hover:text-blue-400"
+                className={[
+                  "font-rubik text-gray-800 transition-colors hover:text-blue-400",
+                  location.pathname.includes("/loans") ? "!text-blue-400" : "",
+                ].join(" ")}
                 to="/loans"
               >
                 Кредиты
