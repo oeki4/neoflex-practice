@@ -23,6 +23,7 @@ export const LoansPage = () => {
     handleSubmit,
     getValues,
     watch,
+    reset,
     formState: { errors },
   } = useForm<LoanInputs>();
   const [showModal, setShowModal] = useState(false);
@@ -31,6 +32,11 @@ export const LoansPage = () => {
   const onSubmit: SubmitHandler<LoanInputs> = () => {
     setFormSent(true);
     setShowModal(true);
+    reset();
+
+    setTimeout(() => {
+      setShowModal(false);
+    }, 10 * 1000);
   };
   return (
     <>

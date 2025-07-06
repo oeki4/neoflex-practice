@@ -3,11 +3,11 @@ import { UserIcon } from "@/shared/ui/Icons/UserIcon.tsx";
 import { CallIcon } from "@/shared/ui/Icons/CallIcon.tsx";
 import { ExitIcon } from "@/shared/ui/Icons/ExitIcon.tsx";
 import { Button } from "@/shared/ui/Button/Button.tsx";
-import { NavLink, useLocation } from "react-router";
+import { NavLink, useLocation, useNavigate } from "react-router";
 
 export const Navbar = () => {
   const location = useLocation();
-  console.log(location.pathname.includes("/loans"));
+  const navigate = useNavigate();
   return (
     <header>
       <Container className="flex justify-between py-6 border-b-2 border-gray-300">
@@ -66,7 +66,9 @@ export const Navbar = () => {
             </li>
           </ul>
         </nav>
-        <Button wrap={false}>Оформить кредит</Button>
+        <Button wrap={false} onClick={() => navigate("/loans")}>
+          Оформить кредит
+        </Button>
       </Container>
     </header>
   );
